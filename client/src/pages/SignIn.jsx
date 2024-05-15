@@ -7,6 +7,7 @@ import {
   signInSuccess,
   signInFailure,
 } from "../redux/user/userSlice";
+import { OAuth } from "../components/index";
 export const SignIn = () => {
   const [formData, setFormData] = useState({});
   const [successMsg, setSuccessMsg] = useState("");
@@ -79,6 +80,7 @@ export const SignIn = () => {
         >
           {loading ? "Loading..." : " Sign In"}
         </button>
+        <OAuth />
       </form>
       {/* <button className="bg-red-800 text-white rounded-lg p-2 uppercase">
         Continue with Google

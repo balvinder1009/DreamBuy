@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTitle } from "../hooks/useTitle";
 import { Link, useNavigate } from "react-router-dom";
+import { OAuth } from "../components/index";
 export const SignUp = () => {
   const [formData, setFormData] = useState({});
   const [error, setError] = useState(null);
@@ -83,6 +84,7 @@ export const SignUp = () => {
         >
           {loading ? "Loading..." : " Sign Up"}
         </button>
+        <OAuth />
       </form>
       {/* <button className="bg-red-800 text-white rounded-lg p-2 uppercase">
         Continue with Google
